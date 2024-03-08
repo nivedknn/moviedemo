@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+{% load static %}
+{% block movie %}
+
+<h1> edit file</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+body
+{
+background-color:pink;
+color:red;
+}
+.navbar-brand
+{
+color:red;
+font-size:50px;
+margin-left:20px;
+padding:10px;
+font-weight:bold;
+}
+.container
+{
+margin-top:40px;
+}

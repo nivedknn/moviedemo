@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+{% load static %}
+{% block movie %}
+
+<!--function based-->
+
+<!--<center>-->
+<!--    <h3>ADD MOVIE</h3>-->
+<!--    <form method="POST" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--        <div class="mb-3">-->
+<!--            <label class="form-label">NAME</label>-->
+<!--            <input type="text" class="form-control"  name="n" placeholder="Enter the name">-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label class="form-label">DESCRIPTION</label>-->
+<!--            <input type="text" class="form-control" name="d" placeholder="enter the description">-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label class="form-label">YEAR</label>-->
+<!--            <input type="number" class="form-control" name="y" placeholder="enter the year">-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label class="form-label">choose image</label>-->
+<!--            <input type="file" class="form-control" name="i">-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <input type="submit" class="form-control btn btn-danger">-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</center>-->
+
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit">
+
+</form>
+
+{% endblock %}

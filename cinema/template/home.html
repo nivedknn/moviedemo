@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block movie %}
+<div class="row">
+    {% for i in m %}
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ i.image.url }}" class="card-img-top" alt="..." style="width:auto; height:250px;">
+            <div class="card-body">
+                <h5 class="card-title"> {{ i.name }}</h5>
+                <p class="card-text">Decsription: {{ i.desc }}</p>
+                <p class="card-text"> Year : {{ i.year }}</p>
+                <a href="{% url 'movie:view' i.id %}" class="btn btn-primary">SELECT</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

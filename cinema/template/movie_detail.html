@@ -1,0 +1,19 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block movie %}
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ v.image.url }}" class="card-img-top" alt="..."  style="width:auto; height:250px;">
+            <div class="card-body">
+                <h3 class="card-title">{{ v.name }}</h3>
+                <p class="card-text">{{ v.desc }}</p>
+                <p class="card-text">{{ v.year }}</p>
+                <a href="{% url 'movie:edit' v.id %}" class="btn btn-primary">EDIT</a>
+                <a href="{% url 'movie:Delete' v.id %}" class="btn btn-primary">DELETE</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

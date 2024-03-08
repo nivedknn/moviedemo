@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+{% load static %}
+{% block movie %}
+<div style="background-color:#b8d4d9;width:500px;padding:3%;padding-left:80px;margin-left:auto;border-radius: 15px;
+margin-right:auto;margin-top:100px;">
+<form method="POST" >
+    <h1 style="font-size: 50px;">Delete</h1>
+    {% csrf_token %}
+    <p style="font-size: 30px;">Are you sure you want to delete?</p>
+    <input type="submit" class="btn btn-primary " value="Delete" >
+</form></div>
+{% endblock %}
